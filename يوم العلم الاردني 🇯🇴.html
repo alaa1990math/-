@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="ar">
+<head>
+<meta charset="UTF-8">
+<title>ارفع علم الأردن</title>
+
+<style>
+body {
+    margin: 0;
+    font-family: Arial;
+    text-align: center;
+    color: white;
+    background: linear-gradient(#0b1d3a, #1b5e20);
+}
+
+h1 { color: gold; margin-top: 40px; }
+
+.box {
+    margin: 30px auto;
+    padding: 20px;
+    width: 80%;
+    border: 2px solid gold;
+    border-radius: 20px;
+}
+
+.container {
+    height: 300px;
+    position: relative;
+}
+
+.flagpole {
+    width: 6px;
+    height: 250px;
+    background: gold;
+    position: absolute;
+    left: 50%;
+}
+
+.flag {
+    width: 120px;
+    position: absolute;
+    left: 50%;
+    bottom: 0;
+    transform: translateX(-50%);
+    transition: 1s;
+}
+
+button {
+    margin-top: 20px;
+    padding: 10px 20px;
+    background: gold;
+    border: none;
+    border-radius: 10px;
+}
+
+</style>
+</head>
+
+<body>
+
+<h1>🇯🇴 ارفع علم الأردن معنا</h1>
+
+<div class="box">
+مدرسة البنيات الأساسية للبنات 🏫
+<br>
+تعميق الانتماء والهوية الوطنية
+</div>
+
+<div class="container">
+<div class="flagpole"></div>
+<img src="https://upload.wikimedia.org/wikipedia/commons/0/0c/Flag_of_Jordan.svg" class="flag" id="flag">
+</div>
+
+<button onclick="raiseFlag()">ارفع العلم 🇯🇴</button>
+
+<script>
+let pos = 0;
+function raiseFlag(){
+    if(pos < 200){
+        pos += 20;
+        document.getElementById("flag").style.bottom = pos + "px";
+    }
+}
+</script>
+
+</body>
+</html>
